@@ -1,0 +1,1209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veritas University</title>
+
+  <link rel="icon" href="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" type="image/x-icon" >
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/fontawesome-free/css/all.min.css ">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/custom_style.css">
+
+  <link rel="stylesheet" type="text/css" href="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.css">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2/css/select2.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.css ">
+
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" rel="stylesheet">
+
+  <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+  
+<style>
+    /*!
+* Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+* Copyright 2015 Daniel Cardoso <@DanielCardoso>
+* Licensed under MIT
+*/
+.la-ball-spin,
+.la-ball-spin > div {
+position: relative;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.la-ball-spin {
+display: block;
+font-size: 0;
+color: #fff;
+}
+.la-ball-spin.la-dark {
+color: #333;
+}
+.la-ball-spin > div {
+display: inline-block;
+float: none;
+background-color: currentColor;
+border: 0 solid currentColor;
+}
+.la-ball-spin {
+width: 32px;
+height: 32px;
+}
+.la-ball-spin > div {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 8px;
+height: 8px;
+margin-top: -4px;
+margin-left: -4px;
+border-radius: 100%;
+-webkit-animation: ball-spin 1s infinite ease-in-out;
+   -moz-animation: ball-spin 1s infinite ease-in-out;
+     -o-animation: ball-spin 1s infinite ease-in-out;
+        animation: ball-spin 1s infinite ease-in-out;
+}
+.la-ball-spin > div:nth-child(1) {
+top: 5%;
+left: 50%;
+-webkit-animation-delay: -1.125s;
+   -moz-animation-delay: -1.125s;
+     -o-animation-delay: -1.125s;
+        animation-delay: -1.125s;
+}
+.la-ball-spin > div:nth-child(2) {
+top: 18.1801948466%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.25s;
+   -moz-animation-delay: -1.25s;
+     -o-animation-delay: -1.25s;
+        animation-delay: -1.25s;
+}
+.la-ball-spin > div:nth-child(3) {
+top: 50%;
+left: 95%;
+-webkit-animation-delay: -1.375s;
+   -moz-animation-delay: -1.375s;
+     -o-animation-delay: -1.375s;
+        animation-delay: -1.375s;
+}
+.la-ball-spin > div:nth-child(4) {
+top: 81.8198051534%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.5s;
+   -moz-animation-delay: -1.5s;
+     -o-animation-delay: -1.5s;
+        animation-delay: -1.5s;
+}
+.la-ball-spin > div:nth-child(5) {
+top: 94.9999999966%;
+left: 50.0000000005%;
+-webkit-animation-delay: -1.625s;
+   -moz-animation-delay: -1.625s;
+     -o-animation-delay: -1.625s;
+        animation-delay: -1.625s;
+}
+.la-ball-spin > div:nth-child(6) {
+top: 81.8198046966%;
+left: 18.1801949248%;
+-webkit-animation-delay: -1.75s;
+   -moz-animation-delay: -1.75s;
+     -o-animation-delay: -1.75s;
+        animation-delay: -1.75s;
+}
+.la-ball-spin > div:nth-child(7) {
+top: 49.9999750815%;
+left: 5.0000051215%;
+-webkit-animation-delay: -1.875s;
+   -moz-animation-delay: -1.875s;
+     -o-animation-delay: -1.875s;
+        animation-delay: -1.875s;
+}
+.la-ball-spin > div:nth-child(8) {
+top: 18.179464974%;
+left: 18.1803700518%;
+-webkit-animation-delay: -2s;
+   -moz-animation-delay: -2s;
+     -o-animation-delay: -2s;
+        animation-delay: -2s;
+}
+.la-ball-spin.la-sm {
+width: 16px;
+height: 16px;
+}
+.la-ball-spin.la-sm > div {
+width: 4px;
+height: 4px;
+margin-top: -2px;
+margin-left: -2px;
+}
+.la-ball-spin.la-2x {
+width: 64px;
+height: 64px;
+}
+.la-ball-spin.la-2x > div {
+width: 16px;
+height: 16px;
+margin-top: -8px;
+margin-left: -8px;
+}
+.la-ball-spin.la-3x {
+width: 96px;
+height: 96px;
+}
+.la-ball-spin.la-3x > div {
+width: 24px;
+height: 24px;
+margin-top: -12px;
+margin-left: -12px;
+}
+/*
+* Animation
+*/
+@-webkit-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+}
+@-moz-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+         transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -moz-transform: scale(0);
+         transform: scale(0);
+}
+}
+@-o-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -o-transform: scale(1);
+       transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -o-transform: scale(0);
+       transform: scale(0);
+}
+}
+@keyframes  ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+}
+}
+</style>
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+            
+            <nav class="main-header navbar navbar-expand navbar-success navbar-dark" style="background-color: #10a310;">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a  href="#" class="nav-link" data-widget="pushmenu"  role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="https://admission.veritas.edu.ng/student/dashboard" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">David Omoudu</a>
+        </li>
+      <!-- Navbar Search -->
+
+
+      <!-- Messages Dropdown Menu -->
+
+      <!-- Notifications Dropdown Menu -->
+
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="" data-toggle="dropdown" href="#">
+          <div class="user-panel d-flex">
+                <div class="image">
+                                            
+                                    </div>
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-header"> Settings</span>
+          <div class="dropdown-divider"></div>
+          <a href="https://admission.veritas.edu.ng/student/my-profile" class="dropdown-item">
+            <i class="fas fa-user mr-2"></i> View Profile
+          </a>
+          <a href="https://admission.veritas.edu.ng/student/change-password" class="dropdown-item mt-2">
+            <i class="fas fa-key mr-2"></i> Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+            <input type="hidden" name="_token" value="oKyJbZwRU1AC5Alzs4QROkveEQawMw3KF0KYCuWO">            <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item ">
+                <i class="nav-icon fas fa-sign-out-alt mr-2"></i>Logout
+            </a>
+        </form>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+</nav>
+
+            
+    <!-- Main Sidebar Container -->
+    
+        
+            <aside class="main-sidebar sidebar-dark-success elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://admission.veritas.edu.ng/student/dashboard" class="brand-link">
+      <img src="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" alt="Veritas Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Veritas E-Campus</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="https://admission.veritas.edu.ng/student/dashboard" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                  Dashboard
+                  </p>
+              </a>
+            </li>
+            
+                
+                    <li class="nav-item">
+                            <a href="#" class="nav-link  active ">
+                                <i class="far fa-dot-circle nav-icon"></i>
+                                <p>
+                                    Academics
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="https://admission.veritas.edu.ng/student/regular/academics/course-registration" class="nav-link   ">
+                                        <i class="nav-icon fas fa-book-open"></i>
+                                        <p>
+                                            Course Registration
+                                        </p>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a  href="https://admission.veritas.edu.ng/student/regular/academics/my-transcript" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                        <p>Unofficial Transcript</p>
+                                    </a>
+                                </li>
+                            </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link     ">
+                            <i class="far fa-credit-card nav-icon"></i>
+                            <p>
+                                Finance
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a  href="https://admission.veritas.edu.ng/student/regular/payments/select-hostel" class="nav-link  ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>Pay Tuition Fee</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  href="https://admission.veritas.edu.ng/student/regular/payments/other-payment" class="nav-link  ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>Pay Other Fees</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://admission.veritas.edu.ng/student/regular/payments/payment-history" class="nav-link  ">
+                                    <i class="nav-icon far fa-dot-circle"></i>
+                                    <p>
+                                        Payment History
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a  href="https://admission.veritas.edu.ng/student/regular/payments/rrr-history" class="nav-link  ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>RRR History</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                                        <li class="nav-item">
+                        <a href="#" class="nav-link   ">
+                            <i class="far fa-dot-circle nav-icon"></i>
+                            <p>
+                                Updates
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="https://admission.veritas.edu.ng/student/regular/update/update-passport" class="nav-link   ">
+                                    <i class="nav-icon fas fa-book-open"></i>
+                                    <p>
+                                        Update Passport
+                                    </p>
+                                </a>
+                            </li>
+                                                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://admission.veritas.edu.ng/student/regular/select-category" class="nav-link  ">
+                            <i class="nav-icon fa fa-home"></i>
+                            <p>
+                                Accomodation
+                            </p>
+                        </a>
+                    </li>
+                
+                
+                
+
+                        <li class="nav-item">
+                <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+                    <input type="hidden" name="_token" value="oKyJbZwRU1AC5Alzs4QROkveEQawMw3KF0KYCuWO">                    <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="nav-link">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
+                </form>
+            </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+        
+    
+<!-- Main Sidebar Container End -->
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <div wire:id="gTH7SYN5WTHmRCAFrzE8" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;gTH7SYN5WTHmRCAFrzE8&quot;,&quot;name&quot;:&quot;student.regular.academics.my-transcript&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;student\/regular\/academics\/my-transcript&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[],&quot;path&quot;:&quot;https:\/\/admission.veritas.edu.ng\/student\/regular\/academics\/my-transcript?&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;fb910b36&quot;,&quot;data&quot;:{&quot;search&quot;:null,&quot;state&quot;:[],&quot;showEditModal&quot;:false,&quot;courses&quot;:[],&quot;transcriptSessions&quot;:{&quot;1&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Principles of Programming I&quot;,&quot;code&quot;:&quot;SEN102&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:56,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Introduction to Web Technologies&quot;,&quot;code&quot;:&quot;SEN104&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:37,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;User Experience Design and Evaluation&quot;,&quot;code&quot;:&quot;SEN106&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:68,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Logic and its Application in Computer Science&quot;,&quot;code&quot;:&quot;SEN108&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:51,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Software Engineering Lab II&quot;,&quot;code&quot;:&quot;SEN182&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:54,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Practicum &quot;,&quot;code&quot;:&quot;SEN190&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:2,&quot;score&quot;:77,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Communication in English II&quot;,&quot;code&quot;:&quot;GST112&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:46,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Logic, Philosophy, and Human Existence&quot;,&quot;code&quot;:&quot;GST122&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:46,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;General Mathematics II&quot;,&quot;code&quot;:&quot;MTH102&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:2,&quot;score&quot;:48,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;General Physics II&quot;,&quot;code&quot;:&quot;PHY102&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;General Practical Physics II&quot;,&quot;code&quot;:&quot;PHY108&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Communication in French&quot;,&quot;code&quot;:&quot;GST124&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:39,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Community Service&quot;,&quot;code&quot;:&quot;GST142&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:2,&quot;score&quot;:75,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;}],&quot;level&quot;:100,&quot;semester&quot;:&quot;Second Semester&quot;,&quot;session&quot;:&quot;2022\/2023&quot;,&quot;TCL&quot;:24,&quot;TCU&quot;:56,&quot;GPA&quot;:&quot;2.33&quot;,&quot;TC&quot;:24,&quot;TGP&quot;:56,&quot;CGPA&quot;:&quot;2.33&quot;},&quot;2&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Communication in English I&quot;,&quot;code&quot;:&quot;GST111&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:62,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Nigerian People and Culture&quot;,&quot;code&quot;:&quot;GST113&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:64,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;History and Philosophy Of Science&quot;,&quot;code&quot;:&quot;GST115&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:60,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Use of Library, Study Skills and ICT&quot;,&quot;code&quot;:&quot;GST121&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:66,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Ethics&quot;,&quot;code&quot;:&quot;GST171&quot;,&quot;credit_load&quot;:0,&quot;semester_offered&quot;:1,&quot;score&quot;:50,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;General Practical Physics I&quot;,&quot;code&quot;:&quot;PHY107&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:1,&quot;score&quot;:70,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Introduction to Computing Sciencess&quot;,&quot;code&quot;:&quot;SEN101&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:57,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Interaction Design &amp; Usability Engineering&quot;,&quot;code&quot;:&quot;SEN103&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:56,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Introduction to Software Engineering&quot;,&quot;code&quot;:&quot;SEN105&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:76,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Software Engineering Lab I&quot;,&quot;code&quot;:&quot;SEN181&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:70,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Elementary Mathematics I&quot;,&quot;code&quot;:&quot;MTH101&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;}],&quot;level&quot;:200,&quot;semester&quot;:&quot;First Semester&quot;,&quot;session&quot;:&quot;2023\/2024&quot;,&quot;TCL&quot;:22,&quot;TCU&quot;:83,&quot;GPA&quot;:&quot;3.77&quot;,&quot;TC&quot;:46,&quot;TGP&quot;:139,&quot;CGPA&quot;:&quot;3.02&quot;},&quot;3&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Introduction to Web Technologies&quot;,&quot;code&quot;:&quot;SEN104&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:61,&quot;grade&quot;:&quot;B&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Communication in French&quot;,&quot;code&quot;:&quot;GST124&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:51,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Principles of programming II&quot;,&quot;code&quot;:&quot;SEN202&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Software Construction&quot;,&quot;code&quot;:&quot;SEN204&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:50,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Design and Analysis of Computer Algorithms&quot;,&quot;code&quot;:&quot;SEN206&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:76,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Principles of Operating Systems&quot;,&quot;code&quot;:&quot;SEN208&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Software Engineering Process&quot;,&quot;code&quot;:&quot;SEN210&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:56,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Information Visualization&quot;,&quot;code&quot;:&quot;SEN212&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:78,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Software Engineering Lab IV&quot;,&quot;code&quot;:&quot;SEN282&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:79,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;SIWES I&quot;,&quot;code&quot;:&quot;SEN290&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:2,&quot;score&quot;:72,&quot;grade&quot;:&quot;A&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Social Teachings of the Church&quot;,&quot;code&quot;:&quot;GST272&quot;,&quot;credit_load&quot;:0,&quot;semester_offered&quot;:2,&quot;score&quot;:50,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Microcontroller Programming&quot;,&quot;code&quot;:&quot;SEN214&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:57,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;}],&quot;level&quot;:200,&quot;semester&quot;:&quot;Second Semester&quot;,&quot;session&quot;:&quot;2023\/2024&quot;,&quot;TCL&quot;:24,&quot;TCU&quot;:87,&quot;GPA&quot;:&quot;3.63&quot;,&quot;TC&quot;:70,&quot;TGP&quot;:226,&quot;CGPA&quot;:&quot;3.23&quot;}},&quot;summary&quot;:[{&quot;TC&quot;:24,&quot;TGP&quot;:56,&quot;CGPA&quot;:&quot;2.33&quot;},{&quot;TC&quot;:70,&quot;TGP&quot;:226,&quot;CGPA&quot;:&quot;3.23&quot;}],&quot;all_results_by_levels&quot;:[],&quot;page&quot;:1,&quot;paginators&quot;:{&quot;page&quot;:1}},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;07d88abb08d98eb62206fa4ee4a3eb44e997f7f1900961c260b25cb0884698d7&quot;}}">
+    <div wire:loading.delay>
+    <div style="display:  flex; justify-content: center; align-items: center; background-color:#000000; position: fixed; top: 0px; left: 0px; z-index: 9999; width: 100%; height: 100%; opacity: .75; ">
+        <div class="la-ball-spin la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            <h1 class="m-0">My Transcript</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="https://admission.veritas.edu.ng/student/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active">student-transcript</li>
+            </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card  card-primary card-outline">
+                        <!-- /.card-header -->
+                        <div class="card-header">
+                            <nav class="navbar navbar-light bg-light justify-content-between">
+
+                                <div class="justify-content-start">
+                                    <button class="btn btn-outline-primary mb-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <i class="fa fa-question-circle mr-2"></i>Help
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- /.card-body -->
+                        <div class="card-body">
+
+                            
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    Some Help Content Here
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table width="100%">
+                                        <tr>
+                                            <td style="text-align: center"><h2><b>Unofficial Transcript</b></h2></td>
+                                        </tr>
+                                </table>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b> David Omoudu </b></td>
+                                        <td><b>Matric No</b></td>
+                                        <td><b>VUG/SEN/22/8778</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Faculty</b></td>
+                                        <td><b>Natural and Applied Sciences</b></td>
+                                        <td><b>Gender</b></td>
+                                        <td><b>Male</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Programme</b></td>
+                                        <td><b> Software Engineering</b></td>
+                                        <td><b>Department</b></td>
+                                        <td><b>Software Engineering</b></td>
+                                    </tr>
+                                </table>
+                            </div>
+                                                        <div class="table-responsive">
+                                <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">ACADEMIC SESSION: 2022/2023</th>
+                                            <th colspan="2">LEVEL: 100</th>
+                                            <th colspan="2">SEMESTER: Second Semester</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Course Code</th>
+                                            <th>Course Title</th>
+                                            <th>Credit Unit</th>
+                                            <th>Score</th>
+                                            <th>Grade</th>
+                                            <th>Pass/Fail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                    <tr>
+                                                <td>1</td>
+                                                <td>SEN102</td>
+                                                <td>Principles of Programming I</td>
+                                                <td>2</td>
+                                                <td>56</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>2</td>
+                                                <td>SEN104</td>
+                                                <td>Introduction to Web Technologies</td>
+                                                <td>2</td>
+                                                <td>37</td>
+                                                <td>F</td>
+                                                <td>Fail</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>3</td>
+                                                <td>SEN106</td>
+                                                <td>User Experience Design and Evaluation</td>
+                                                <td>2</td>
+                                                <td>68</td>
+                                                <td>B</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>4</td>
+                                                <td>SEN108</td>
+                                                <td>Logic and its Application in Computer Science</td>
+                                                <td>2</td>
+                                                <td>51</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>5</td>
+                                                <td>SEN182</td>
+                                                <td>Software Engineering Lab II</td>
+                                                <td>2</td>
+                                                <td>54</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>6</td>
+                                                <td>SEN190</td>
+                                                <td>Practicum </td>
+                                                <td>1</td>
+                                                <td>77</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>7</td>
+                                                <td>GST112</td>
+                                                <td>Communication in English II</td>
+                                                <td>2</td>
+                                                <td>46</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>8</td>
+                                                <td>GST122</td>
+                                                <td>Logic, Philosophy, and Human Existence</td>
+                                                <td>2</td>
+                                                <td>46</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>9</td>
+                                                <td>MTH102</td>
+                                                <td>General Mathematics II</td>
+                                                <td>3</td>
+                                                <td>48</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>10</td>
+                                                <td>PHY102</td>
+                                                <td>General Physics II</td>
+                                                <td>2</td>
+                                                <td>45</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>11</td>
+                                                <td>PHY108</td>
+                                                <td>General Practical Physics II</td>
+                                                <td>1</td>
+                                                <td>45</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>12</td>
+                                                <td>GST124</td>
+                                                <td>Communication in French</td>
+                                                <td>2</td>
+                                                <td>39</td>
+                                                <td>F</td>
+                                                <td>Fail</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>13</td>
+                                                <td>GST142</td>
+                                                <td>Community Service</td>
+                                                <td>1</td>
+                                                <td>75</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                        
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Load</b></td>
+                                            <td colspan="2"><b>24</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Unit</td>
+                                            <td colspan="2"><b>56</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                            <td colspan="2"><b>2.33</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TC</b></td>
+                                            <td colspan="2"><b>24</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TGP</b></td>
+                                            <td colspan="2"><b>56</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                            <td colspan="2"><b>2.33</b></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                                                        <div class="table-responsive">
+                                <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">ACADEMIC SESSION: 2023/2024</th>
+                                            <th colspan="2">LEVEL: 200</th>
+                                            <th colspan="2">SEMESTER: First Semester</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Course Code</th>
+                                            <th>Course Title</th>
+                                            <th>Credit Unit</th>
+                                            <th>Score</th>
+                                            <th>Grade</th>
+                                            <th>Pass/Fail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                    <tr>
+                                                <td>1</td>
+                                                <td>GST111</td>
+                                                <td>Communication in English I</td>
+                                                <td>2</td>
+                                                <td>62</td>
+                                                <td>B</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>2</td>
+                                                <td>GST113</td>
+                                                <td>Nigerian People and Culture</td>
+                                                <td>2</td>
+                                                <td>64</td>
+                                                <td>B</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>3</td>
+                                                <td>GST115</td>
+                                                <td>History and Philosophy Of Science</td>
+                                                <td>2</td>
+                                                <td>60</td>
+                                                <td>B</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>4</td>
+                                                <td>GST121</td>
+                                                <td>Use of Library, Study Skills and ICT</td>
+                                                <td>2</td>
+                                                <td>66</td>
+                                                <td>B</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>5</td>
+                                                <td>GST171</td>
+                                                <td>Ethics</td>
+                                                <td>0</td>
+                                                <td>50</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>6</td>
+                                                <td>PHY107</td>
+                                                <td>General Practical Physics I</td>
+                                                <td>1</td>
+                                                <td>70</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>7</td>
+                                                <td>SEN101</td>
+                                                <td>Introduction to Computing Sciencess</td>
+                                                <td>3</td>
+                                                <td>57</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>8</td>
+                                                <td>SEN103</td>
+                                                <td>Interaction Design &amp; Usability Engineering</td>
+                                                <td>2</td>
+                                                <td>56</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>9</td>
+                                                <td>SEN105</td>
+                                                <td>Introduction to Software Engineering</td>
+                                                <td>3</td>
+                                                <td>76</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>10</td>
+                                                <td>SEN181</td>
+                                                <td>Software Engineering Lab I</td>
+                                                <td>2</td>
+                                                <td>70</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>11</td>
+                                                <td>MTH101</td>
+                                                <td>Elementary Mathematics I</td>
+                                                <td>3</td>
+                                                <td>45</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                        
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Load</b></td>
+                                            <td colspan="2"><b>22</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Unit</td>
+                                            <td colspan="2"><b>83</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                            <td colspan="2"><b>3.77</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TC</b></td>
+                                            <td colspan="2"><b>46</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TGP</b></td>
+                                            <td colspan="2"><b>139</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                            <td colspan="2"><b>3.02</b></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                                                        <div class="table-responsive">
+                                <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">ACADEMIC SESSION: 2023/2024</th>
+                                            <th colspan="2">LEVEL: 200</th>
+                                            <th colspan="2">SEMESTER: Second Semester</th>
+                                        </tr>
+                                    </thead>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Course Code</th>
+                                            <th>Course Title</th>
+                                            <th>Credit Unit</th>
+                                            <th>Score</th>
+                                            <th>Grade</th>
+                                            <th>Pass/Fail</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                                                                    <tr>
+                                                <td>1</td>
+                                                <td>SEN104</td>
+                                                <td>Introduction to Web Technologies</td>
+                                                <td>2</td>
+                                                <td>51</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>2</td>
+                                                <td>GST124</td>
+                                                <td>Communication in French</td>
+                                                <td>2</td>
+                                                <td>51</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>3</td>
+                                                <td>SEN202</td>
+                                                <td>Principles of programming II</td>
+                                                <td>3</td>
+                                                <td>45</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>4</td>
+                                                <td>SEN204</td>
+                                                <td>Software Construction</td>
+                                                <td>2</td>
+                                                <td>50</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>5</td>
+                                                <td>SEN206</td>
+                                                <td>Design and Analysis of Computer Algorithms</td>
+                                                <td>2</td>
+                                                <td>76</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>6</td>
+                                                <td>SEN208</td>
+                                                <td>Principles of Operating Systems</td>
+                                                <td>2</td>
+                                                <td>45</td>
+                                                <td>D</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>7</td>
+                                                <td>SEN210</td>
+                                                <td>Software Engineering Process</td>
+                                                <td>2</td>
+                                                <td>56</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>8</td>
+                                                <td>SEN212</td>
+                                                <td>Information Visualization</td>
+                                                <td>2</td>
+                                                <td>78</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>9</td>
+                                                <td>SEN282</td>
+                                                <td>Software Engineering Lab IV</td>
+                                                <td>2</td>
+                                                <td>79</td>
+                                                <td>A</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>10</td>
+                                                <td>SEN290</td>
+                                                <td>SIWES I</td>
+                                                <td>3</td>
+                                                <td>52</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>11</td>
+                                                <td>GST272</td>
+                                                <td>Social Teachings of the Church</td>
+                                                <td>0</td>
+                                                <td>50</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                                                                    <tr>
+                                                <td>12</td>
+                                                <td>SEN214</td>
+                                                <td>Microcontroller Programming</td>
+                                                <td>2</td>
+                                                <td>57</td>
+                                                <td>C</td>
+                                                <td>Pass</td>
+                                            </tr>
+                                        
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Load</b></td>
+                                            <td colspan="2"><b>24</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Total Credit Unit</td>
+                                            <td colspan="2"><b>87</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                            <td colspan="2"><b>2.83</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TC</b></td>
+                                            <td colspan="2"><b>70</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>TGP</b></td>
+                                            <td colspan="2"><b>226</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                            <td colspan="2"><b>2.73</b></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            
+                            
+
+
+
+
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- /.card-footer -->
+                        <div class="card-footer d-flex justify-content-end">
+
+                        </div>
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+                <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+
+
+</div>
+
+<!-- Livewire Component wire-end:gTH7SYN5WTHmRCAFrzE8 -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+    <footer class="main-footer no-print">
+    <!-- Default to the left -->
+    <div class="text-center">
+        <strong>Copyright &copy; Veritas University Abuja 2025 </strong>.
+    </div>
+
+</footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/jquery/jquery.min.js "></script>
+
+<script src=" https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.js "></script>
+
+<!-- Bootstrap 4 -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+<!-- AdminLTE App -->
+<script src="https://admission.veritas.edu.ng/ui/dist/js/adminlte.min.js"></script>
+
+<script type="text/javascript" src="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.js"></script>
+
+<!-- Select2 -->
+<script src="https://admission.veritas.edu.ng/ui/plugins/select2/js/select2.full.min.js "></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+
+            toastr.options = {
+                "positionClass": "toast-bottom-right",
+                "progressBar": true,
+            }
+
+            window.addEventListener('hide_form', event => {
+            $('#form').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            window.addEventListener('hide_jamb_form', event => {
+            $('#form_jamb').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            //TODO LIST.
+            toastr.options.onHidden = function()
+             {
+                 console.log('goodbye');
+            }
+
+/*             $('#confirmationModal2').modal({
+                backdrop: 'static',
+                keyboard: false
+            }) */
+
+    });
+
+</script>
+
+<script>
+
+    window.addEventListener('show_form', event => {
+        $('#form').modal('show');
+    })
+
+    window.addEventListener('show_jamb_form', event => {
+        $('#form_jamb').modal('show');
+    })
+
+    window.addEventListener('show-delete-modal', event => {
+        $('#confirmationModal').modal('show');
+    })
+
+    window.addEventListener('hide-delete-modal', event => {
+        $('#confirmationModal').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-end-modal', event => {
+        $('#confirmationModal2').modal('show');
+    })
+
+    window.addEventListener('hide-end-modal', event => {
+        $('#confirmationModal2').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-publish-modal', event => {
+        $('#confirmationModal3').modal('show');
+    })
+
+    window.addEventListener('hide-publish-modal', event => {
+        $('#confirmationModal3').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-process-modal', event => {
+        $('#confirmationModal4').modal('show');
+    })
+
+    window.addEventListener('hide-process-modal', event => {
+        $('#confirmationModal4').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+</script>
+
+
+<script src="/livewire/livewire.js?id=c69d0f2801c01fcf8166" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'oKyJbZwRU1AC5Alzs4QROkveEQawMw3KF0KYCuWO';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+</body>
+</html>
