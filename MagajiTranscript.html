@@ -1,0 +1,1269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veritas University</title>
+
+  <link rel="icon" href="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" type="image/x-icon" >
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/fontawesome-free/css/all.min.css ">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/custom_style.css">
+
+  <link rel="stylesheet" type="text/css" href="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.css">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2/css/select2.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.css ">
+
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" rel="stylesheet">
+
+  <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+  
+<style>
+    /*!
+* Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+* Copyright 2015 Daniel Cardoso <@DanielCardoso>
+* Licensed under MIT
+*/
+.la-ball-spin,
+.la-ball-spin > div {
+position: relative;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.la-ball-spin {
+display: block;
+font-size: 0;
+color: #fff;
+}
+.la-ball-spin.la-dark {
+color: #333;
+}
+.la-ball-spin > div {
+display: inline-block;
+float: none;
+background-color: currentColor;
+border: 0 solid currentColor;
+}
+.la-ball-spin {
+width: 32px;
+height: 32px;
+}
+.la-ball-spin > div {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 8px;
+height: 8px;
+margin-top: -4px;
+margin-left: -4px;
+border-radius: 100%;
+-webkit-animation: ball-spin 1s infinite ease-in-out;
+   -moz-animation: ball-spin 1s infinite ease-in-out;
+     -o-animation: ball-spin 1s infinite ease-in-out;
+        animation: ball-spin 1s infinite ease-in-out;
+}
+.la-ball-spin > div:nth-child(1) {
+top: 5%;
+left: 50%;
+-webkit-animation-delay: -1.125s;
+   -moz-animation-delay: -1.125s;
+     -o-animation-delay: -1.125s;
+        animation-delay: -1.125s;
+}
+.la-ball-spin > div:nth-child(2) {
+top: 18.1801948466%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.25s;
+   -moz-animation-delay: -1.25s;
+     -o-animation-delay: -1.25s;
+        animation-delay: -1.25s;
+}
+.la-ball-spin > div:nth-child(3) {
+top: 50%;
+left: 95%;
+-webkit-animation-delay: -1.375s;
+   -moz-animation-delay: -1.375s;
+     -o-animation-delay: -1.375s;
+        animation-delay: -1.375s;
+}
+.la-ball-spin > div:nth-child(4) {
+top: 81.8198051534%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.5s;
+   -moz-animation-delay: -1.5s;
+     -o-animation-delay: -1.5s;
+        animation-delay: -1.5s;
+}
+.la-ball-spin > div:nth-child(5) {
+top: 94.9999999966%;
+left: 50.0000000005%;
+-webkit-animation-delay: -1.625s;
+   -moz-animation-delay: -1.625s;
+     -o-animation-delay: -1.625s;
+        animation-delay: -1.625s;
+}
+.la-ball-spin > div:nth-child(6) {
+top: 81.8198046966%;
+left: 18.1801949248%;
+-webkit-animation-delay: -1.75s;
+   -moz-animation-delay: -1.75s;
+     -o-animation-delay: -1.75s;
+        animation-delay: -1.75s;
+}
+.la-ball-spin > div:nth-child(7) {
+top: 49.9999750815%;
+left: 5.0000051215%;
+-webkit-animation-delay: -1.875s;
+   -moz-animation-delay: -1.875s;
+     -o-animation-delay: -1.875s;
+        animation-delay: -1.875s;
+}
+.la-ball-spin > div:nth-child(8) {
+top: 18.179464974%;
+left: 18.1803700518%;
+-webkit-animation-delay: -2s;
+   -moz-animation-delay: -2s;
+     -o-animation-delay: -2s;
+        animation-delay: -2s;
+}
+.la-ball-spin.la-sm {
+width: 16px;
+height: 16px;
+}
+.la-ball-spin.la-sm > div {
+width: 4px;
+height: 4px;
+margin-top: -2px;
+margin-left: -2px;
+}
+.la-ball-spin.la-2x {
+width: 64px;
+height: 64px;
+}
+.la-ball-spin.la-2x > div {
+width: 16px;
+height: 16px;
+margin-top: -8px;
+margin-left: -8px;
+}
+.la-ball-spin.la-3x {
+width: 96px;
+height: 96px;
+}
+.la-ball-spin.la-3x > div {
+width: 24px;
+height: 24px;
+margin-top: -12px;
+margin-left: -12px;
+}
+/*
+* Animation
+*/
+@-webkit-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+}
+@-moz-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+         transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -moz-transform: scale(0);
+         transform: scale(0);
+}
+}
+@-o-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -o-transform: scale(1);
+       transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -o-transform: scale(0);
+       transform: scale(0);
+}
+}
+@keyframes  ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+}
+}
+</style>
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+            
+            <nav class="main-header navbar navbar-expand navbar-success navbar-dark" style="background-color: #10a310;">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a  href="#" class="nav-link" data-widget="pushmenu"  role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="https://admission.veritas.edu.ng/student/dashboard" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">LUKA RIMAMTAKA MAGAJI</a>
+        </li>
+      <!-- Navbar Search -->
+
+
+      <!-- Messages Dropdown Menu -->
+
+      <!-- Notifications Dropdown Menu -->
+
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="" data-toggle="dropdown" href="#">
+          <div class="user-panel d-flex">
+                <div class="image">
+                                            <img src="data:image/jpeg;base64,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" class="img-circle" alt="User Image">
+                                    </div>
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-header"> Settings</span>
+          <div class="dropdown-divider"></div>
+          <a href="https://admission.veritas.edu.ng/student/my-profile" class="dropdown-item">
+            <i class="fas fa-user mr-2"></i> View Profile
+          </a>
+          <a href="https://admission.veritas.edu.ng/student/change-password" class="dropdown-item mt-2">
+            <i class="fas fa-key mr-2"></i> Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+            <input type="hidden" name="_token" value="xmhLNJO0D8OE4spMYPGQOppod0jSENRyf5cv7ecx">            <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item ">
+                <i class="nav-icon fas fa-sign-out-alt mr-2"></i>Logout
+            </a>
+        </form>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+</nav>
+
+            
+    <!-- Main Sidebar Container -->
+    
+        
+            <aside class="main-sidebar sidebar-dark-success elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://admission.veritas.edu.ng/student/dashboard" class="brand-link">
+      <img src="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" alt="Veritas Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Veritas E-Campus</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="Magaji.html" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Dashboard
+                  </p>
+              </a>
+            </li>
+            
+                
+                    
+                        <li class="nav-item">
+                                <a href="#" class="nav-link  active ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>
+                                        Academics
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="MagajiTranscript.html" class="nav-link   ">
+                                            <i class="nav-icon fas fa-book-open"></i>
+                                            <p>
+                                                Course Registration
+                                            </p>
+                                        </a>
+                                    </li>
+                                                                                                            <li class="nav-item">
+                                        <a  href="MagajiTranscript.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                            <p>Unofficial Transcript</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link     ">
+                                <i class="far fa-credit-card nav-icon"></i>
+                                <p>
+                                    Finance
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a  href="MagajiTuition.html" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Pay Tuition Fee</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  href="MagajiTuition.html" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Pay Other Fees</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="MagajiTuition.html" class="nav-link  ">
+                                        <i class="nav-icon far fa-dot-circle"></i>
+                                        <p>
+                                            RRR History
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://admission.veritas.edu.ng/student/regular/payments/payment-history" class="nav-link  ">
+                                        <i class="nav-icon far fa-dot-circle"></i>
+                                        <p>
+                                            Payment History
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  href="https://admission.veritas.edu.ng/student/regular/payments/fund-wallet" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>
+                                            Fund Wallet
+                                            <span class="right badge badge-danger">New</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="https://admission.veritas.edu.ng/student/regular/select-category" class="nav-link  ">
+                                <i class="nav-icon fa fa-home"></i>
+                                <p>
+                                    Accomodation
+                                </p>
+                            </a>
+                        </li>
+                    
+                
+
+
+                
+                
+
+                        <li class="nav-item">
+                <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+                    <input type="hidden" name="_token" value="xmhLNJO0D8OE4spMYPGQOppod0jSENRyf5cv7ecx">                    <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="nav-link">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
+                </form>
+            </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+        
+    
+<!-- Main Sidebar Container End -->
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <div wire:id="GAQ73HF3zz4Vkzx9ruJM" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;GAQ73HF3zz4Vkzx9ruJM&quot;,&quot;name&quot;:&quot;student.regular.academics.my-transcript&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;student\/regular\/academics\/my-transcript&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[],&quot;path&quot;:&quot;https:\/\/admission.veritas.edu.ng\/student\/regular\/academics\/my-transcript?&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;2d8e101d&quot;,&quot;data&quot;:{&quot;search&quot;:null,&quot;state&quot;:[],&quot;showEditModal&quot;:false,&quot;courses&quot;:[],&quot;transcriptSessions&quot;:{&quot;1&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Communication In English&quot;,&quot;code&quot;:&quot;GST111&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:34,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Principles of Management&quot;,&quot;code&quot;:&quot;AMS101&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:56,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Introduction to Computers&quot;,&quot;code&quot;:&quot;AMS103&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:54,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Ethics&quot;,&quot;code&quot;:&quot;VUA-ETH171&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:1,&quot;score&quot;:50,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Introduction to Business 1&quot;,&quot;code&quot;:&quot;BUA101&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:52,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Public Speaking for Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA113&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Spirituality in Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA115&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:18,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Total Management Training for Small Business&quot;,&quot;code&quot;:&quot;VUA-BUA117&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:29,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Post Covid-19 Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA119&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;}],&quot;level&quot;:100,&quot;semester&quot;:&quot;First Semester&quot;,&quot;session&quot;:&quot;2023\/2024&quot;,&quot;TCL&quot;:17,&quot;TCU&quot;:29,&quot;GPA&quot;:&quot;1.71&quot;,&quot;TC&quot;:17,&quot;TGP&quot;:29,&quot;CGPA&quot;:&quot;1.71&quot;},&quot;2&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Communication in English II&quot;,&quot;code&quot;:&quot;GST112&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:18,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Basic Mathematics&quot;,&quot;code&quot;:&quot;AMS102&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:46,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Principles of Project Management&quot;,&quot;code&quot;:&quot;AMS104&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:27,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Community Service&quot;,&quot;code&quot;:&quot;VUA-CMS142&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:20,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Introduction to Business II&quot;,&quot;code&quot;:&quot;BUA102&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Applications of  Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA114&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Understanding Contemporary Organizational Structure&quot;,&quot;code&quot;:&quot;VUA-BUA116&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:45,&quot;grade&quot;:&quot;D&quot;,&quot;pass&quot;:&quot;Pass&quot;}],&quot;level&quot;:100,&quot;semester&quot;:&quot;Second Semester&quot;,&quot;session&quot;:&quot;2023\/2024&quot;,&quot;TCL&quot;:14,&quot;TCU&quot;:12,&quot;GPA&quot;:&quot;0.86&quot;,&quot;TC&quot;:31,&quot;TGP&quot;:41,&quot;CGPA&quot;:&quot;1.32&quot;},&quot;3&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Entrepreneurship and Innovation&quot;,&quot;code&quot;:&quot;ENT211&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Principles of Business Administration I&quot;,&quot;code&quot;:&quot;BUA201&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Financial Accounting &amp;amp; Reporting I&quot;,&quot;code&quot;:&quot;ACC201&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Business Statistics&quot;,&quot;code&quot;:&quot;BUA203&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Leadership and Governance&quot;,&quot;code&quot;:&quot;BUA205&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:50,&quot;grade&quot;:&quot;C&quot;,&quot;pass&quot;:&quot;Pass&quot;},{&quot;title&quot;:&quot;Statistics for Management Research&quot;,&quot;code&quot;:&quot;VUA-BUA201&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:1,&quot;score&quot;:20,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Communication In English&quot;,&quot;code&quot;:&quot;GST111&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Spirituality in Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA115&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Total Management Training for Small Business&quot;,&quot;code&quot;:&quot;VUA-BUA117&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:1,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;}],&quot;level&quot;:200,&quot;semester&quot;:&quot;First Semester&quot;,&quot;session&quot;:&quot;2024\/2025&quot;,&quot;TCL&quot;:22,&quot;TCU&quot;:6,&quot;GPA&quot;:&quot;0.27&quot;,&quot;TC&quot;:53,&quot;TGP&quot;:47,&quot;CGPA&quot;:&quot;0.89&quot;},&quot;4&quot;:{&quot;courses&quot;:[{&quot;title&quot;:&quot;Principles of Business Administration II&quot;,&quot;code&quot;:&quot;BUA202&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Philosophy, Logic and Human Existence&quot;,&quot;code&quot;:&quot;GST212&quot;,&quot;credit_load&quot;:1,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Quantitative Analysis in Management&quot;,&quot;code&quot;:&quot;BUA204&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:16,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Introduction to Financial Management&quot;,&quot;code&quot;:&quot;BUA216&quot;,&quot;credit_load&quot;:3,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Green Management&quot;,&quot;code&quot;:&quot;BUA218&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Dark Sides of Business Management&quot;,&quot;code&quot;:&quot;VUA-BUA202&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Technology Management&quot;,&quot;code&quot;:&quot;VUA-BUA204&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:19,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Communication in English II&quot;,&quot;code&quot;:&quot;GST112&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Principles of Project Management&quot;,&quot;code&quot;:&quot;AMS104&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Community Service&quot;,&quot;code&quot;:&quot;VUA-CMS142&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;},{&quot;title&quot;:&quot;Introduction to Business II&quot;,&quot;code&quot;:&quot;BUA102&quot;,&quot;credit_load&quot;:2,&quot;semester_offered&quot;:2,&quot;score&quot;:0,&quot;grade&quot;:&quot;F&quot;,&quot;pass&quot;:&quot;Fail&quot;}],&quot;level&quot;:200,&quot;semester&quot;:&quot;Second Semester&quot;,&quot;session&quot;:&quot;2024\/2025&quot;,&quot;TCL&quot;:23,&quot;TCU&quot;:0,&quot;GPA&quot;:&quot;0.00&quot;,&quot;TC&quot;:76,&quot;TGP&quot;:47,&quot;CGPA&quot;:&quot;0.62&quot;}},&quot;summary&quot;:[{&quot;TC&quot;:31,&quot;TGP&quot;:41,&quot;CGPA&quot;:&quot;1.32&quot;},{&quot;TC&quot;:76,&quot;TGP&quot;:47,&quot;CGPA&quot;:&quot;0.62&quot;}],&quot;all_results_by_levels&quot;:[],&quot;transfer_student&quot;:[],&quot;checker_for_transfer&quot;:false,&quot;page&quot;:1,&quot;paginators&quot;:{&quot;page&quot;:1}},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;780c4fe989619877a0a233b6d96df5cef4c8720c6bb07dd866c46dbb8d02aed6&quot;}}">
+    <div wire:loading.delay>
+    <div style="display:  flex; justify-content: center; align-items: center; background-color:#000000; position: fixed; top: 0px; left: 0px; z-index: 9999; width: 100%; height: 100%; opacity: .75; ">
+        <div class="la-ball-spin la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            <h1 class="m-0">My Transcript</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="https://admission.veritas.edu.ng/student/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active">student-transcript</li>
+            </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card  card-primary card-outline">
+                        <!-- /.card-header -->
+                        <div class="card-header">
+                            <nav class="navbar navbar-light bg-light justify-content-between">
+
+                                <div class="justify-content-start">
+                                    <button class="btn btn-outline-primary mb-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <i class="fa fa-question-circle mr-2"></i>Help
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- /.card-body -->
+                        <div class="card-body">
+
+                            
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    Some Help Content Here
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table width="100%">
+                                        <tr>
+                                            <td style="text-align: center"><h2><b>Unofficial Transcript</b></h2></td>
+                                        </tr>
+                                </table>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <tr>
+                                        <td><b>Name</b></td>
+                                        <td><b>RIMAMTAKA MAGAJI LUKA</b></td>
+                                        <td><b>Matric No</b></td>
+                                        <td><b>VUG/BUS/23/9943</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Faculty</b></td>
+                                        <td><b>Management Sciences</b></td>
+                                        <td><b>Gender</b></td>
+                                        <td><b>Male</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Programme</b></td>
+                                        <td><b> Business Administration</b></td>
+                                        <td><b>Department</b></td>
+                                        <td><b>Business Administration</b></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            
+                                                                                        <div class="table-responsive">
+                                    <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                                                                <thead>
+                                            <tr>
+                                                <th colspan="3">ACADEMIC SESSION: 2023/2024</th>
+                                                <th colspan="2">LEVEL: 100</th>
+                                                <th colspan="2">SEMESTER: First Semester</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credit Unit</th>
+                                                <th>Score</th>
+                                                <th>Grade</th>
+                                                <th>Pass/Fail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td>1</td>
+                                                    <td>GST111</td>
+                                                    <td>Communication In English</td>
+                                                    <td>2</td>
+                                                    <td>34</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>2</td>
+                                                    <td>AMS101</td>
+                                                    <td>Principles of Management</td>
+                                                    <td>2</td>
+                                                    <td>56</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>3</td>
+                                                    <td>AMS103</td>
+                                                    <td>Introduction to Computers</td>
+                                                    <td>2</td>
+                                                    <td>64</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>4</td>
+                                                    <td>VUA-ETH171</td>
+                                                    <td>Ethics</td>
+                                                    <td>1</td>
+                                                    <td>50</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>5</td>
+                                                    <td>BUA101</td>
+                                                    <td>Introduction to Business 1</td>
+                                                    <td>2</td>
+                                                    <td>82</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>6</td>
+                                                    <td>VUA-BUA113</td>
+                                                    <td>Public Speaking for Business Management</td>
+                                                    <td>2</td>
+                                                    <td>85</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>7</td>
+                                                    <td>VUA-BUA115</td>
+                                                    <td>Spirituality in Business Management</td>
+                                                    <td>2</td>
+                                                    <td>18</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>8</td>
+                                                    <td>VUA-BUA117</td>
+                                                    <td>Total Management Training for Small Business</td>
+                                                    <td>2</td>
+                                                    <td>89</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>9</td>
+                                                    <td>VUA-BUA119</td>
+                                                    <td>Post Covid-19 Business Management</td>
+                                                    <td>2</td>
+                                                    <td>55</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                   
+                                                </tr>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Load</b></td>
+                                                <td colspan="2"><b>17</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Unit</td>
+                                                <td colspan="2"><b>29</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                                <td colspan="2"><b>2.71</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TC</b></td>
+                                                <td colspan="2"><b>17</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TGP</b></td>
+                                                <td colspan="2"><b>29</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                                <td colspan="2"><b>2.71</b></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                                            <div class="table-responsive">
+                                    <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                                                                <thead>
+                                            <tr>
+                                                <th colspan="3">ACADEMIC SESSION: 2023/2024</th>
+                                                <th colspan="2">LEVEL: 100</th>
+                                                <th colspan="2">SEMESTER: Second Semester</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credit Unit</th>
+                                                <th>Score</th>
+                                                <th>Grade</th>
+                                                <th>Pass/Fail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td>1</td>
+                                                    <td>GST112</td>
+                                                    <td>Communication in English II</td>
+                                                    <td>2</td>
+                                                    <td>68</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>2</td>
+                                                    <td>AMS102</td>
+                                                    <td>Basic Mathematics</td>
+                                                    <td>2</td>
+                                                    <td>86</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>3</td>
+                                                    <td>AMS104</td>
+                                                    <td>Principles of Project Management</td>
+                                                    <td>2</td>
+                                                    <td>27</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>4</td>
+                                                    <td>VUA-CMS142</td>
+                                                    <td>Community Service</td>
+                                                    <td>2</td>
+                                                    <td>40</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>5</td>
+                                                    <td>BUA102</td>
+                                                    <td>Introduction to Business II</td>
+                                                    <td>2</td>
+                                                    <td>60</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>6</td>
+                                                    <td>VUA-BUA114</td>
+                                                    <td>Applications of  Business Management</td>
+                                                    <td>2</td>
+                                                    <td>85</td>     
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>7</td>
+                                                    <td>VUA-BUA116</td>
+                                                    <td>Understanding Contemporary Organizational Structure</td>
+                                                    <td>2</td>
+                                                    <td>45</td>
+                                                    <td>D</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Load</b></td>
+                                                <td colspan="2"><b>14</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Unit</td>
+                                                <td colspan="2"><b>12</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                                <td colspan="2"><b>2.96</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TC</b></td>
+                                                <td colspan="2"><b>31</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TGP</b></td>
+                                                <td colspan="2"><b>41</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                                <td colspan="2"><b>3.32</b></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                                            <div class="table-responsive">
+                                    <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                                                                <thead>
+                                            <tr>
+                                                <th colspan="3">ACADEMIC SESSION: 2024/2025</th>
+                                                <th colspan="2">LEVEL: 200</th>
+                                                <th colspan="2">SEMESTER: First Semester</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credit Unit</th>
+                                                <th>Score</th>
+                                                <th>Grade</th>
+                                                <th>Pass/Fail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td>1</td>
+                                                    <td>ENT211</td>
+                                                    <td>Entrepreneurship and Innovation</td>
+                                                    <td>2</td>
+                                                    <td>70</td>     
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>2</td>
+                                                    <td>BUA201</td>
+                                                    <td>Principles of Business Administration I</td>
+                                                    <td>3</td>
+                                                    <td>57</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>3</td>
+                                                    <td>ACC201</td>
+                                                    <td>Financial Accounting &amp;amp; Reporting I</td>
+                                                    <td>3</td>
+                                                    <td>30</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>4</td>
+                                                    <td>BUA203</td>
+                                                    <td>Business Statistics</td>
+                                                    <td>3</td>
+                                                    <td>86</td>
+                                                    <td>A</td>      
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>5</td>
+                                                    <td>BUA205</td>
+                                                    <td>Leadership and Governance</td>
+                                                    <td>2</td>
+                                                    <td>50</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>6</td>
+                                                    <td>VUA-BUA201</td>
+                                                    <td>Statistics for Management Research</td>
+                                                    <td>3</td>
+                                                    <td>20</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>7</td>
+                                                    <td>GST111</td>
+                                                    <td>Communication In English</td>
+                                                    <td>2</td>
+                                                    <td>57</td>
+                                                    <td>C</td>  
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>8</td>
+                                                    <td>VUA-BUA115</td>
+                                                    <td>Spirituality in Business Management</td>
+                                                    <td>2</td>
+                                                    <td>64</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>9</td>
+                                                    <td>VUA-BUA117</td>
+                                                    <td>Total Management Training for Small Business</td>
+                                                    <td>2</td>
+                                                    <td>30</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Load</b></td>
+                                                <td colspan="2"><b>22</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Unit</td>
+                                                <td colspan="2"><b>6</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                                <td colspan="2"><b>3.27</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TC</b></td>
+                                                <td colspan="2"><b>53</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TGP</b></td>
+                                                <td colspan="2"><b>47</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                                <td colspan="2"><b>3.39</b></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                                            <div class="table-responsive">
+                                    <table id="semesters" class="table table-hover table-bordered table-striped" style="margin-bottom: 20px">
+                                                                                <thead>
+                                            <tr>
+                                                <th colspan="3">ACADEMIC SESSION: 2024/2025</th>
+                                                <th colspan="2">LEVEL: 200</th>
+                                                <th colspan="2">SEMESTER: Second Semester</th>
+                                            </tr>
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Course Code</th>
+                                                <th>Course Title</th>
+                                                <th>Credit Unit</th>
+                                                <th>Score</th>
+                                                <th>Grade</th>
+                                                <th>Pass/Fail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                                                            <tr>
+                                                    <td>1</td>
+                                                    <td>BUA202</td>
+                                                    <td>Principles of Business Administration II</td>
+                                                    <td>3</td>
+                                                    <td>96</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                   
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>2</td>
+                                                    <td>GST212</td>
+                                                    <td>Philosophy, Logic and Human Existence</td>
+                                                    <td>1</td>
+                                                    <td>65</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                 
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>3</td>
+                                                    <td>BUA204</td>
+                                                    <td>Quantitative Analysis in Management</td>
+                                                    <td>2</td>
+                                                    <td>16</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>4</td>
+                                                    <td>BUA216</td>
+                                                    <td>Introduction to Financial Management</td>
+                                                    <td>3</td>
+                                                    <td>38</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>5</td>
+                                                    <td>BUA218</td>
+                                                    <td>Green Management</td>
+                                                    <td>2</td>
+                                                    <td>66</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>6</td>
+                                                    <td>VUA-BUA202</td>
+                                                    <td>Dark Sides of Business Management</td>
+                                                    <td>2</td>
+                                                    <td>78</td>
+                                                    <td>A</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>7</td>
+                                                    <td>VUA-BUA204</td>
+                                                    <td>Technology Management</td>
+                                                    <td>2</td>
+                                                    <td>59</td> 
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>8</td>
+                                                    <td>GST112</td>
+                                                    <td>Communication in English II</td>
+                                                    <td>2</td>
+                                                    <td>57</td>
+                                                    <td>C</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>9</td>
+                                                    <td>AMS104</td>
+                                                    <td>Principles of Project Management</td>
+                                                    <td>2</td>
+                                                    <td>29</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>10</td>
+                                                    <td>VUA-CMS142</td>
+                                                    <td>Community Service</td>
+                                                    <td>2</td>
+                                                    <td>39</td>
+                                                    <td>F</td>
+                                                    <td>Fail</td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>11</td>
+                                                    <td>BUA102</td>
+                                                    <td>Introduction to Business II</td>
+                                                    <td>2</td>
+                                                    <td>63</td>
+                                                    <td>B</td>
+                                                    <td>Pass</td>
+                                                </tr>
+                                            
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Load</b></td>
+                                                <td colspan="2"><b>23</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Total Credit Unit</td>
+                                                <td colspan="2"><b>0</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Grade Point Average (GPA)</b></td>
+                                                <td colspan="2"><b>3.40</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TC</b></td>
+                                                <td colspan="2"><b>76</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>TGP</b></td>
+                                                <td colspan="2"><b>47</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5"><b>Cumulative Grade Points Average (CGPA)</b></td>
+                                                <td colspan="2"><b>3.62</b></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            
+                            
+
+
+
+
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- /.card-footer -->
+                        <div class="card-footer d-flex justify-content-end">
+
+                        </div>
+                        <!-- /.card-footer -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+                <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+
+
+</div>
+
+<!-- Livewire Component wire-end:GAQ73HF3zz4Vkzx9ruJM -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+    <footer class="main-footer no-print">
+    <!-- Default to the left -->
+    <div class="text-center">
+        <strong>Copyright &copy; Veritas University Abuja 2025 </strong>.
+    </div>
+
+</footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/jquery/jquery.min.js "></script>
+
+<script src=" https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.js "></script>
+
+<!-- Bootstrap 4 -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+<!-- AdminLTE App -->
+<script src="https://admission.veritas.edu.ng/ui/dist/js/adminlte.min.js"></script>
+
+<script type="text/javascript" src="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.js"></script>
+
+<!-- Select2 -->
+<script src="https://admission.veritas.edu.ng/ui/plugins/select2/js/select2.full.min.js "></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+
+            toastr.options = {
+                "positionClass": "toast-bottom-right",
+                "progressBar": true,
+            }
+
+            window.addEventListener('hide_form', event => {
+            $('#form').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            window.addEventListener('hide_jamb_form', event => {
+            $('#form_jamb').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            //TODO LIST.
+            toastr.options.onHidden = function()
+             {
+                 console.log('goodbye');
+            }
+
+/*             $('#confirmationModal2').modal({
+                backdrop: 'static',
+                keyboard: false
+            }) */
+
+    });
+
+</script>
+
+<script>
+
+    window.addEventListener('show_form', event => {
+        $('#form').modal('show');
+    })
+
+    window.addEventListener('show_jamb_form', event => {
+        $('#form_jamb').modal('show');
+    })
+
+    window.addEventListener('show-delete-modal', event => {
+        $('#confirmationModal').modal('show');
+    })
+
+    window.addEventListener('hide-delete-modal', event => {
+        $('#confirmationModal').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-end-modal', event => {
+        $('#confirmationModal2').modal('show');
+    })
+
+    window.addEventListener('hide-end-modal', event => {
+        $('#confirmationModal2').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-publish-modal', event => {
+        $('#confirmationModal3').modal('show');
+    })
+
+    window.addEventListener('hide-publish-modal', event => {
+        $('#confirmationModal3').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-process-modal', event => {
+        $('#confirmationModal4').modal('show');
+    })
+
+    window.addEventListener('hide-process-modal', event => {
+        $('#confirmationModal4').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+</script>
+
+
+<script src="/livewire/livewire.js?id=c69d0f2801c01fcf8166" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'xmhLNJO0D8OE4spMYPGQOppod0jSENRyf5cv7ecx';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+</body>
+</html>
