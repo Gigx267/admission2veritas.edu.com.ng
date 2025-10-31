@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veritas University</title>
+
+  <link rel="icon" href="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" type="image/x-icon" >
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/fontawesome-free/css/all.min.css ">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/dist/css/custom_style.css">
+
+  <link rel="stylesheet" type="text/css" href="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.css">
+
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2/css/select2.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css ">
+
+    <link rel="stylesheet" href="https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.css ">
+
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" rel="stylesheet">
+
+  <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+  
+<style>
+    /*!
+* Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+* Copyright 2015 Daniel Cardoso <@DanielCardoso>
+* Licensed under MIT
+*/
+.la-ball-spin,
+.la-ball-spin > div {
+position: relative;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.la-ball-spin {
+display: block;
+font-size: 0;
+color: #fff;
+}
+.la-ball-spin.la-dark {
+color: #333;
+}
+.la-ball-spin > div {
+display: inline-block;
+float: none;
+background-color: currentColor;
+border: 0 solid currentColor;
+}
+.la-ball-spin {
+width: 32px;
+height: 32px;
+}
+.la-ball-spin > div {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 8px;
+height: 8px;
+margin-top: -4px;
+margin-left: -4px;
+border-radius: 100%;
+-webkit-animation: ball-spin 1s infinite ease-in-out;
+   -moz-animation: ball-spin 1s infinite ease-in-out;
+     -o-animation: ball-spin 1s infinite ease-in-out;
+        animation: ball-spin 1s infinite ease-in-out;
+}
+.la-ball-spin > div:nth-child(1) {
+top: 5%;
+left: 50%;
+-webkit-animation-delay: -1.125s;
+   -moz-animation-delay: -1.125s;
+     -o-animation-delay: -1.125s;
+        animation-delay: -1.125s;
+}
+.la-ball-spin > div:nth-child(2) {
+top: 18.1801948466%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.25s;
+   -moz-animation-delay: -1.25s;
+     -o-animation-delay: -1.25s;
+        animation-delay: -1.25s;
+}
+.la-ball-spin > div:nth-child(3) {
+top: 50%;
+left: 95%;
+-webkit-animation-delay: -1.375s;
+   -moz-animation-delay: -1.375s;
+     -o-animation-delay: -1.375s;
+        animation-delay: -1.375s;
+}
+.la-ball-spin > div:nth-child(4) {
+top: 81.8198051534%;
+left: 81.8198051534%;
+-webkit-animation-delay: -1.5s;
+   -moz-animation-delay: -1.5s;
+     -o-animation-delay: -1.5s;
+        animation-delay: -1.5s;
+}
+.la-ball-spin > div:nth-child(5) {
+top: 94.9999999966%;
+left: 50.0000000005%;
+-webkit-animation-delay: -1.625s;
+   -moz-animation-delay: -1.625s;
+     -o-animation-delay: -1.625s;
+        animation-delay: -1.625s;
+}
+.la-ball-spin > div:nth-child(6) {
+top: 81.8198046966%;
+left: 18.1801949248%;
+-webkit-animation-delay: -1.75s;
+   -moz-animation-delay: -1.75s;
+     -o-animation-delay: -1.75s;
+        animation-delay: -1.75s;
+}
+.la-ball-spin > div:nth-child(7) {
+top: 49.9999750815%;
+left: 5.0000051215%;
+-webkit-animation-delay: -1.875s;
+   -moz-animation-delay: -1.875s;
+     -o-animation-delay: -1.875s;
+        animation-delay: -1.875s;
+}
+.la-ball-spin > div:nth-child(8) {
+top: 18.179464974%;
+left: 18.1803700518%;
+-webkit-animation-delay: -2s;
+   -moz-animation-delay: -2s;
+     -o-animation-delay: -2s;
+        animation-delay: -2s;
+}
+.la-ball-spin.la-sm {
+width: 16px;
+height: 16px;
+}
+.la-ball-spin.la-sm > div {
+width: 4px;
+height: 4px;
+margin-top: -2px;
+margin-left: -2px;
+}
+.la-ball-spin.la-2x {
+width: 64px;
+height: 64px;
+}
+.la-ball-spin.la-2x > div {
+width: 16px;
+height: 16px;
+margin-top: -8px;
+margin-left: -8px;
+}
+.la-ball-spin.la-3x {
+width: 96px;
+height: 96px;
+}
+.la-ball-spin.la-3x > div {
+width: 24px;
+height: 24px;
+margin-top: -12px;
+margin-left: -12px;
+}
+/*
+* Animation
+*/
+@-webkit-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+}
+@-moz-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+         transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -moz-transform: scale(0);
+         transform: scale(0);
+}
+}
+@-o-keyframes ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -o-transform: scale(1);
+       transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -o-transform: scale(0);
+       transform: scale(0);
+}
+}
+@keyframes  ball-spin {
+0%,
+100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+20% {
+    opacity: 1;
+}
+80% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+}
+}
+</style>
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+            
+            <nav class="main-header navbar navbar-expand navbar-success navbar-dark" style="background-color: #10a310;">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a  href="#" class="nav-link" data-widget="pushmenu"  role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="https://admission.veritas.edu.ng/student/dashboard" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">UDEMEZUE ANGEL IFEOMA</a>
+        </li>
+      <!-- Navbar Search -->
+
+
+      <!-- Messages Dropdown Menu -->
+
+      <!-- Notifications Dropdown Menu -->
+
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="" data-toggle="dropdown" href="#">
+          <div class="user-panel d-flex">
+                <div class="image">
+                                            <img src="data:image/jpeg;base64,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" class="img-circle" alt="User Image">
+                                    </div>
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-header"> Settings</span>
+          <div class="dropdown-divider"></div>
+          <a href="Udemezueprofile.html" class="dropdown-item">
+            <i class="fas fa-user mr-2"></i> View Profile
+          </a>
+          <a href="https://admission.veritas.edu.ng/student/change-password" class="dropdown-item mt-2">
+            <i class="fas fa-key mr-2"></i> Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+            <input type="hidden" name="_token" value="ty9tRJZrs70y1xc9t03VIulzOzhwE7JNraomJMSW">            <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item ">
+                <i class="nav-icon fas fa-sign-out-alt mr-2"></i>Logout
+            </a>
+        </form>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+</nav>
+
+            
+    <!-- Main Sidebar Container -->
+    
+        
+            <aside class="main-sidebar sidebar-dark-success elevation-4">
+    <!-- Brand Logo -->
+    <a href="https://admission.veritas.edu.ng/student/dashboard" class="brand-link">
+      <img src="https://admission.veritas.edu.ng/ui/dist/img/vuna.png" alt="Veritas Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Veritas E-Campus</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="https://admission.veritas.edu.ng/student/dashboard" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Dashboard
+                  </p>
+              </a>
+            </li>
+            
+                
+                    
+                        <li class="nav-item">
+                                <a href="#" class="nav-link   ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>
+                                        Academics
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    
+                                    <li class="nav-item">
+                                        <a href="https://admission.veritas.edu.ng/student/regular/academics/course-registration" class="nav-link   ">
+                                            <i class="nav-icon fas fa-book-open"></i>
+                                            <p>
+                                                Course Registration
+                                            </p>
+                                        </a>
+                                    </li>
+                                    
+                                   
+
+                                    
+                                    <li class="nav-item">
+                                        <a  href="https://admission.veritas.edu.ng/student/regular/academics/my-transcript" class="nav-link ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                            <p>Unofficial Transcript</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link     ">
+                                <i class="far fa-credit-card nav-icon"></i>
+                                <p>
+                                    Finance
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a  href="https://admission.veritas.edu.ng/student/regular/payments/select-hostel" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Pay Tuition Fee</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  href="https://admission.veritas.edu.ng/student/regular/payments/other-payment" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>Pay Other Fees</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://admission.veritas.edu.ng/student/regular/payments/rrr-history" class="nav-link  ">
+                                        <i class="nav-icon far fa-dot-circle"></i>
+                                        <p>
+                                            RRR History
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://admission.veritas.edu.ng/student/regular/payments/payment-history" class="nav-link  ">
+                                        <i class="nav-icon far fa-dot-circle"></i>
+                                        <p>
+                                            Payment History
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  href="https://admission.veritas.edu.ng/student/regular/payments/fund-wallet" class="nav-link  ">
+                                        <i class="far fa-dot-circle nav-icon"></i>
+                                        <p>
+                                            Fund Wallet
+                                            <span class="right badge badge-danger">New</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                                                <li class="nav-item">
+                            <a href="https://admission.veritas.edu.ng/student/regular/select-category" class="nav-link  ">
+                                <i class="nav-icon fa fa-home"></i>
+                                <p>
+                                    Accomodation
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://admission.veritas.edu.ng/student/regular/inquiries" class="nav-link  ">
+                                <i class="nav-icon fa fa-question"></i>
+                                <p>
+                                    Inquiries
+                                     <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                    
+                
+
+
+                
+                
+
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link   ">
+                                    <i class="far fa-dot-circle nav-icon"></i>
+                                    <p>
+                                        Updates
+                                        <i class="right fas fa-angle-left"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    
+                                        <li class="nav-item">
+                                            <a href="https://admission.veritas.edu.ng/student/regular/update/update-passport" class="nav-link   ">
+                                                <i class="nav-icon fas fa-book-open"></i>
+                                                <p>
+                                                    Update Passport
+                                                </p>
+                                            </a>
+                                        </li>
+                                    
+                                        <li class="nav-item">
+                                            <a  href="https://admission.veritas.edu.ng/student/regular/update/update-signature" class="nav-link ">
+                                            <i class="far fa-circle nav-icon"></i>
+                                                <p>
+                                                    Update Signature
+                                                </p>
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            </li>
+                        
+
+                        <li class="nav-item">
+                <form action="https://admission.veritas.edu.ng/student/logout" method="POST">
+                    <input type="hidden" name="_token" value="ty9tRJZrs70y1xc9t03VIulzOzhwE7JNraomJMSW">                    <a href="https://admission.veritas.edu.ng/student/logout" onclick="event.preventDefault(); this.closest('form').submit();" class="nav-link">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>
+                            Logout
+                        </p>
+                    </a>
+                </form>
+            </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+        
+    
+<!-- Main Sidebar Container End -->
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <div wire:id="I4XXZQHPuGTTeIPaCbyT" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;I4XXZQHPuGTTeIPaCbyT&quot;,&quot;name&quot;:&quot;student.dashboard&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;student\/dashboard&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[],&quot;path&quot;:&quot;https:\/\/admission.veritas.edu.ng\/student\/dashboard&quot;},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;d9be7b6c&quot;,&quot;data&quot;:{&quot;departmentIdBeingRemoved&quot;:null,&quot;student_medical&quot;:[],&quot;page&quot;:1,&quot;paginators&quot;:{&quot;page&quot;:1}},&quot;dataMeta&quot;:{&quot;models&quot;:{&quot;student_medical&quot;:{&quot;class&quot;:&quot;App\\Models\\StudentMedical&quot;,&quot;id&quot;:9772,&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;}}},&quot;checksum&quot;:&quot;419e833f423034cea18989a6089725c6195e2c704e2a22ce47f882f5ca5f6171&quot;}}">
+    <div wire:loading.delay>
+    <div style="display:  flex; justify-content: center; align-items: center; background-color:#000000; position: fixed; top: 0px; left: 0px; z-index: 9999; width: 100%; height: 100%; opacity: .75; ">
+        <div class="la-ball-spin la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+     <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+            <h1 class="m-0">Student Dashboard</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                  <!-- Widget: user widget style 1 -->
+                  <div class="card card-widget widget-user">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header text-white"
+                         style='background: url("https://admission.veritas.edu.ng/ui/dist/img/photo1.png") center center;'>
+                      <h3 class="widget-user-username text-left">Udemezue Angel Ifeoma</h3>
+                      <h5 class="widget-user-desc text-left">VUG/MAC/23/10635</h5>
+                      <h5 class="widget-user-desc text-left">2024/2025</h5>
+
+                    </div>
+                    <div class="widget-user-image">
+                                                    <img class="img-circle" src='data:image/jpeg;base64,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' alt="User Avatar">
+                        
+                    </div>
+                    <div class="card-footer">
+                      <div class="row">
+                        <div class="col-sm-3 border-right">
+                          <div class="description-block">
+                            <h5 class="description-header"><b>Current Level</b></h5>
+                            <span class="description-text">200</span>
+                          </div>
+                          <!-- /.description-block -->
+                        </div>
+
+                         <!-- /.col -->
+                        <div class="col-sm-3 border-right">
+                          <div class="description-block">
+                            <h5 class="description-header"><b>Status</b></h5>
+                            <span class="description-text">Active</span>
+                          </div>
+                          <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-3 border-right">
+                            <div class="description-block">
+                              <h5 class="description-header"><b>Matric No.</b></h5>
+                              <span class="description-text">VUG/MAC/23/10635</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+                        <!-- /.col -->
+                        <div class="col-sm-3">
+                          <div class="description-block">
+                            <h5 class="description-header"><b>Programme</b></h5>
+                            <span class="description-text">Mass Communication</span>
+                          </div>
+                          <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.row -->
+                    </div>
+                  </div>
+                  <!-- /.widget-user -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+
+                            <section class="content">
+                <div class="container-fluid">
+                  <div class="row">
+
+
+                    <div class="col-md-6">
+
+                        <div class="timeline">
+                          <div class="time-label">
+                            <span class="bg-red">Students Notice Board</span>
+                          </div>
+
+                          <div>
+                            <i class="fas fa-envelope bg-warning"></i>
+                            <div class="timeline-item">
+                                <span class="time"><i class="fas fa-clock"></i></span>
+                                <h3 class="timeline-header"><b>Bursary Clearance Form</b></h3>
+                              <div class="timeline-body">
+                                All students are expected to print 2 copies of each of the following clearance forms. Below are the required forms:
+                                <p><b>To print the Bursary clearance form, click on</b>
+                                    
+                                        <a href="https://admission.veritas.edu.ng/student/regular/clearance/bursary">Print Clearance Form</a>
+                                    
+
+                                </p>
+                                <p><b>To print the Debt Recovery credit form, click on </b> <a href="https://admission.veritas.edu.ng/student/regular/clearance/debit-recovery">Print Credit Form</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <i class="fas fa-envelope bg-info"></i>
+                            <div class="timeline-item">
+                                <span class="time"><i class="fas fa-clock"></i></span>
+                                <h3 class="timeline-header"><b>Payment of Dues</b></h3>
+                              <div class="timeline-body">
+                                In addition to paying at least the required minimum percentage of tuition fees, all students must pay their dues to access the clearance card on the portal.
+                                This card will be required upon resumption, so payments should be completed in advance. The dues to be paid include:
+                                    <li>Faculty/Departmental Due</li>
+                                    <li>SRA Dues</li>
+                                    <li>NFCS Dues</li>
+                                    <li>Medical screening Test (For Freshers)</li>
+                                <p>To start the payment, click on <a href="https://admission.veritas.edu.ng/student/regular/payments/other-payment">Pay Dues</a></p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <i class="fas fa-envelope bg-danger"></i>
+                            <div class="timeline-item">
+                                <span class="time"><i class="fas fa-clock"></i></span>
+                                <h3 class="timeline-header"><b>INFORMATION TO THE FRESH STUDENTS </b></h3>
+                              <div class="timeline-body">
+                                All fresh(UTME,  DIRECT ENTRY, TRANSFER) students are to resume to the University with four(4) photocopies of the under listed documents:
+                                <ol>
+                                <li>UTME result slip</li>
+                                <li>O' level Result(s)(WAEC/NECO/NABTEB etc)</li>
+                                <li>Veritas University admission letter</li>
+                                <li>Birth certificate/ evidence of age</li>
+                                <li>Attestation letter</li>
+                                <li>Sponsorship letter</li>
+                                <li>Medical fitness report</li>
+                                <li>Evidence of State of origin</li>
+                                <li>Original O' LEVEL certificate (if ready)</li>
+                                <li>Evidence of Change of Institution into Veritas University, for those who didn't chose Veritas University as first choice University</li>
+                                <li> JAMB Admission Letter</li>
+                                <li>Transcript (for transfer students)</li>
+                                <li>Evidence of transfer fee(for transfer students)</li>
+                                </ol>
+                                <p><b>*NOTE:</b><br>
+                                  <ol>
+                                    <li>ALL CANDIDATES THAT WROTE UTME WITH AWAITING RESULTS/DID NOT MAKE VERITAS UNIVERSITY THEIR FIRST CHOICE UNIVERSITY ARE TO VISIT ANY JAMB CBT CENTER FOR THE CHANGE OF INSTITUTION AND UPLOAD THEIR O' LEVEL RESULT(S ) ON THE JAMB PORTAL BEFORE RESUMPTION.</li>
+                                    <li>TRANSFER CANDIDATES ARE TO ALSO VISIT ANY CBT CENTER FOR REGULARIZATION OF THEIR ADMISSION, AND THEREAFTER SUBMIT THE INDEMNITY FORM TO THE VICE-CHANCELLOR'S OFFICE FOR SIGNATURE.  </li>
+                                  </ol>
+                                </p>
+                                <p>
+                                  Signed <br>
+                                  Dr.Mrs Stella Chizoba Okonkwo <br>
+                                  Registrar
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                        <div>
+                        <i class="fas fa-clock bg-gray"></i>
+                    </div>
+
+                  </div>
+              </div>
+                              <div class="col-md-6">
+                    <div class="card card-primary card-outline">
+                      <div class="card-header border-transparent">
+                        <h3 class="card-title"><b>Other Fees/Dues</b></h3>
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table class="table m-0  table-sm">
+                            <thead>
+                              <tr>
+                              <th>Description</th>
+                              <th>Amount</th>
+                              <th>Pay Now</th>
+                              <th>Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                                                                  <tr>
+                                    <td>Faculty/Departmental Due (Faculty of NAS, EDU, MGT, HUM, SOS, PHL &amp; THE)</td>
+                                    <td>&#8358;55,000.00</td>
+                                    <td><a href="https://admission.veritas.edu.ng/student/regular/payments/other-fee-two?search=90657" > Pay Now </a></td>
+                                                                            <td> <a href="" wire:click.prevent="confirmDepartmentRemoval(90657)"><i class="fa fa-trash text-danger" ></i> </a></td>
+                                    
+                                  </tr>
+                                                                  <tr>
+                                    <td>Faculty/Departmental Due (Faculty of NAS, EDU, MGT, HUM, SOS, PHL &amp; THE)</td>
+                                    <td>&#8358;55,000.00</td>
+                                    <td><a href="https://admission.veritas.edu.ng/student/regular/payments/other-fee-two?search=116010" > Pay Now </a></td>
+                                                                            <td> <a href="" wire:click.prevent="confirmDepartmentRemoval(116010)"><i class="fa fa-trash text-danger" ></i> </a></td>
+                                    
+                                  </tr>
+                                
+                                
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+                            </div>
+              </div>
+
+              </section>
+              
+
+
+
+
+        <!-- /.row -->
+
+
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+
+
+            <!--Confirmation Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+              <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5>NOTICE! NOTICE!! NOTICE!!!</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="alert alert-success" role="alert">
+                              <h4> <b>CLEARANCE FORM  </b></h4>
+                              <h6>Information about the clearance form now available on the student notice board.</h6>
+                          </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                              <i class="fa fa-times mr-2"></i> Close
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Confirmation Modal -->
+    
+    <script type="text/javascript">
+
+      //let the_status = 200;
+
+       //if(the_status < 1000){
+       //   window.addEventListener('load', function() {
+       //       $('#myModal').modal('show');
+       //   });
+     // }
+
+  </script>
+
+  <!--Confirmation Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" wire:ignore.self>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Delete Due</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4>Are you sure you want to delete this due?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="fa fa-times mr-2"></i> Cancel</button>
+                <button type="button" wire:click.prevent='deleteOtherFeeHistory' class="btn btn-danger">
+                    <i class="fa fa-trash mr-2"></i>
+                    Delete Due
+                </button>
+            </div>
+        </div>
+    </div>
+  </div>
+<!--Confirmation Modal -->
+
+</div>
+
+<!-- Livewire Component wire-end:I4XXZQHPuGTTeIPaCbyT -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+    <footer class="main-footer no-print">
+    <!-- Default to the left -->
+    <div class="text-center">
+        <strong>Copyright &copy; Veritas University Abuja 2025 </strong>.
+    </div>
+
+</footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/jquery/jquery.min.js "></script>
+
+<script src=" https://admission.veritas.edu.ng/ui/plugins/multilevel-form/multi_level.js "></script>
+
+<!-- Bootstrap 4 -->
+<script src=" https://admission.veritas.edu.ng/ui/plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+<!-- AdminLTE App -->
+<script src="https://admission.veritas.edu.ng/ui/dist/js/adminlte.min.js"></script>
+
+<script type="text/javascript" src="https://admission.veritas.edu.ng/ui/plugins/toastr/toastr.min.js"></script>
+
+<!-- Select2 -->
+<script src="https://admission.veritas.edu.ng/ui/plugins/select2/js/select2.full.min.js "></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+
+            toastr.options = {
+                "positionClass": "toast-bottom-right",
+                "progressBar": true,
+            }
+
+            window.addEventListener('hide_form', event => {
+            $('#form').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            window.addEventListener('hide_jamb_form', event => {
+            $('#form_jamb').modal('hide');
+            toastr.success(event.detail.message, 'Success!')
+
+            })
+
+            //TODO LIST.
+            toastr.options.onHidden = function()
+             {
+                 console.log('goodbye');
+            }
+
+/*             $('#confirmationModal2').modal({
+                backdrop: 'static',
+                keyboard: false
+            }) */
+
+    });
+
+</script>
+
+<script>
+
+    window.addEventListener('show_form', event => {
+        $('#form').modal('show');
+    })
+
+    window.addEventListener('show_jamb_form', event => {
+        $('#form_jamb').modal('show');
+    })
+
+    window.addEventListener('show-delete-modal', event => {
+        $('#confirmationModal').modal('show');
+    })
+
+    window.addEventListener('hide-delete-modal', event => {
+        $('#confirmationModal').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-end-modal', event => {
+        $('#confirmationModal2').modal('show');
+    })
+
+    window.addEventListener('hide-end-modal', event => {
+        $('#confirmationModal2').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-publish-modal', event => {
+        $('#confirmationModal3').modal('show');
+    })
+
+    window.addEventListener('hide-publish-modal', event => {
+        $('#confirmationModal3').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+    window.addEventListener('show-process-modal', event => {
+        $('#confirmationModal4').modal('show');
+    })
+
+    window.addEventListener('hide-process-modal', event => {
+        $('#confirmationModal4').modal('hide');
+        toastr.success(event.detail.message, 'Success!')
+    })
+
+</script>
+
+
+<script src="/livewire/livewire.js?id=c69d0f2801c01fcf8166" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'ty9tRJZrs70y1xc9t03VIulzOzhwE7JNraomJMSW';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+</body>
+</html>
